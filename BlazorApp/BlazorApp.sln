@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorAppUI.Library", "Blaz
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAPI.Library", "WebAPI.Library\WebAPI.Library.csproj", "{585A9C28-15E3-4858-A14F-A631DC0A681B}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FrontEnd", "FrontEnd", "{EDB4C4B8-E836-48F2-8BA3-72115C97486E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BackEnd", "BackEnd", "{05BB6B87-EFD4-43F1-B926-DD0ECE0BE205}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,6 +40,12 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9AD23E1E-B387-4A29-81C8-85412A92E9DB} = {EDB4C4B8-E836-48F2-8BA3-72115C97486E}
+		{6380C2DE-6EE4-4BE3-9CE8-8AFC187A0337} = {05BB6B87-EFD4-43F1-B926-DD0ECE0BE205}
+		{4B336EC2-AB83-4E42-8DBB-13D42570FEB8} = {EDB4C4B8-E836-48F2-8BA3-72115C97486E}
+		{585A9C28-15E3-4858-A14F-A631DC0A681B} = {05BB6B87-EFD4-43F1-B926-DD0ECE0BE205}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {FA15BBEC-C723-4AB6-BC4B-9F1EB64FCD5F}
