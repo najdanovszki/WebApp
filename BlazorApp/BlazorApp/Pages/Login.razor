@@ -1,0 +1,33 @@
+﻿@page "/Login"
+
+@using Models;
+@using Data;
+@using Microsoft.Extensions.Configuration;
+
+@inject IConfiguration _config
+
+<h3>Login</h3>
+
+<EditForm Model="@user" OnValidSubmit="Get">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+
+    <InputText id="userName" @bind-Value="user.UserName" />
+    <InputText id="password" @bind-Value="user.Password" />
+    <InputText id="emailAddress" @bind-Value="user.EmailAddress" />
+
+    <button type="submit" class="btn btn-primary">Login</button>
+</EditForm>
+
+@code {
+    private UserModel user = new UserModel();
+
+    private void Get()
+    {
+        BlazorApp.Data.Login getToken = new BlazorApp.Data.Login(_config);
+        if (getToken.GetToken(user.UserName, user.Password)) 
+        {
+            user = new UserModel();    
+        };
+    }
+}
